@@ -203,6 +203,14 @@ a.resume-link {
 	    border-left: 0;
     }
 }
+
+
+// for iPhone scalling
+@media screen and (max-device-width: 480px){
+  body{
+    -webkit-text-size-adjust: none;
+  }
+}
     
 
 
