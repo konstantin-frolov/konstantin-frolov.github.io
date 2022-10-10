@@ -58,7 +58,9 @@
 							<p class="mb-0">Доброго времени суток. Программирование для меня - хобби, переросшее в профессию.</p>
 							<p>В начале 2019 познакомился с машинным обучением и задачами компьютерного зрения. Эти технологии очень сильно меня затянули.</p>
 							<p>В данный момент занимаюсь построением алгоритмов машинного обучения применительно к медицинским исследованиям.</p>
-							<p>Хорошо владею Python и библиотеками Numpy, Scipy, OpenCV, Keras, Pytorch. По этому сайту можно судить, что имею некоторые познания в HTML и CSS. Также разрабатывал несколько небольших баз данных на MySQL.</p>
+							<p>Хорошо владею Python и библиотеками Numpy, Scipy, Sklearn, OpenCV, Tensorflow, Pytorch.</p>
+							<p>Неплохо владею Docker и Linux.</p>
+							<p>По этому сайту можно судить, что имею некоторые познания в HTML и CSS.</p>
 						</div>
 					</div>
 				</div>
@@ -74,14 +76,16 @@
 										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right">"РТК Радиология" | 2020 - по н. вр.</div>
 									</div>
 									<div class="item-content">
-										<p>Разработчик алгоритмов компьютерного зрения. Задачи классификации, обнаружения, сегментации изображений для медицинских исследований</p>
+										<p>Разработчик алгоритмов компьютерного зрения. Задачи классификации, обнаружения, сегментации изображений и одномерных сигналов для медицинских исследований.</p>
+										<p>Решаю любые задачи в области анализа изображений от идеи до реализации в проде.</p>
+										<p>Частично решаю задачи MLOps в части деплоя разрабатываемых систем у заказчика.</p>
 
 									</div>
 								</div>
 								<div class="item mb-3">
 									<div class="item-heading row align-items-center mb-2">
 										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Ведущий инженер</h4>
-										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right">"Интелтех" | 2013 - по н. вр.</div>
+										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right">"Интелтех" | 2013 - 2020</div>
 									</div>
 									<div class="item-content">
 										<p>Разработчик антенн и радиотрактов. Много работаю с численными методами электродинамики. Провожу тестирование на выполнение условий электромагнитной совместимости устройств (ЭМС). Участвую в системной проектировании программно-аппаратных комплексов. Разрабатываю алгоритмы на Matlab и Python в части радиотехники.</p>
@@ -101,6 +105,35 @@
 							</section>
 							<section class="project-section py-3">
 								<h3 class="text-uppercase resume-section-heading mb-4">Проекты</h3>
+								<div class="item mb-3">
+									<div class="item-heading row align-items-center mb-2">
+										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Подбор протезов</h4>
+										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right"><a href="https://www.1tv.ru/shows/dobroe-utro/reportazh/it-tehnologii-vezde-dobroe-utro-fragment-vypuska-ot-11-04-2022" target="_blank">О проекте</a></div>
+									</div>
+									<div class="item-content">
+										<img src="assets/images/prosthesis.png" alt="Протезирование" alt="center" width="40%">
+										<p>Данный проект выполнялся для планирования операций протезирования тазобедренного и коленного суставов.</p>
+										<p>Для автоматического позиционирования протеза, его подбора и ускорения процесса планирования операции необходимо найти несколько харатерных точек на снимке.</p>
+										<p>По этим точкам осуществляется расчет параметров протеза и правильного позицинирования макета и инструментов планирования.</p>
+										<p>В рамках проекта была решена задача поиска ключевых точек.</p>
+										<p>При разработке использовалась большоей количество неразмеченных данных для Semi-Supervised обучения, а затем обучение целевой задаче на малом датасете.</p>
+										<p>В итоге получена легкая модель для CPU вычислений, работающая порядка 500 мс.</p>
+									</div>
+								</div>
+								<div class="item mb-3">
+									<div class="item-heading row align-items-center mb-2">
+										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Анализ снимков маммографии</h4>
+										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right"><a href="https://www.1tv.ru/shows/dobroe-utro/reportazh/it-tehnologii-vezde-dobroe-utro-fragment-vypuska-ot-11-04-2022" target="_blank">О проекте</a></div>
+									</div>
+									<div class="item-content">
+										<img src="assets/images/mammo.png" alt="Анализ маммографии" alt="center" width="40%">
+										<p>В этом проекте реализовано обнаружение и сегментации паталогий на маммографических снимках.</p>
+										<p>Используется достаточно много препроцессинга для первичной фильтрации и приближения области анализа перед алгоритмами нейронных сетей.</p>
+										<p>Далее каскад нейронных сетей анализирует снимок для различных задач: классификации, детекции, сегментации.</p>
+										<p>Для снижения количества FP предсказаний используется несколько алгоритмов постпроцессинга.</p>
+										<p>В итоге формируется протокол и JSON ответ для отрисовки патологий в проприетарном Viewer.</p>
+									</div>
+								</div>
 								<div class="item mb-3">
 									<div class="item-heading row align-items-center mb-2">
 										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Распознавание лиц real-time</h4>
@@ -143,10 +176,11 @@
 										<li class="mb-2">Git<li>
 										<li class="mb-2">Docker<li>
 										<li class="mb-2">Linux<li>
-										<li class="mb-2">Keras, Pytorch, Pandas, Numpy, Scipy</li>
-										<li class="mb-2">Pillow, Scikit-image, OpenCV, Matplotlib</li>
+										<li class="mb-2">Pytorch, Tensorflow, Scikit-Learn, ONNX</li>
+										<li class="mb-2">Pandas, Numpy, Scipy<li></li>
+										<li class="mb-2">Scikit-image, OpenCV, Matplotlib, Plotly, Pillow</li>
 										<li class="mb-2">MySQL</li>
-										<li class="mb-2">HTML, CSS</li>
+										<li class="mb-2">HTML, CSS, JS</li>
 										<li class="mb-2">Matlab, VBA</li>
 									</ul>
 									</div>
@@ -155,8 +189,8 @@
 										<ul class="list-unstyled resume-skills-list">
 											<li class="mb-2">Командный игрок</li>
 											<li class="mb-2">Инициативность<li>
-												<li class="mb-2">Нестандартный подход</li>
-												<li>Ориетация на результат</li>
+											<li class="mb-2">Нестандартный подход</li>
+											<li>Ориетация на результат</li>
 											</ul>
 										</div>
 									</section>
